@@ -26,9 +26,9 @@ class VscodeExtensionUrl:
 
         publisher, extension = itemName.strip().split(".")
 
-        version = re.findall(r'"version":"([^"]+)"',requests.get(marketplace_url).text)
+        version = re.findall(r'"version"\s*:\s*"([^"]+)"',requests.get(marketplace_url).text, re.IGNORECASE)
 
-        if not len(version):
+        if not version:
             raise Exception("not a marketplace url - missing version")
 
         return VscodeExtensionUrl.DOWNLOAD_URL % {"publisher":publisher, "name":extension, "version": version.pop(0)}
