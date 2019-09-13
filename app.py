@@ -2,7 +2,7 @@ import os
 from flask import Flask, request, redirect, render_template
 
 import requests
-from urlparse import urlparse
+from urllib.parse import urlparse
 import re
 
 class VscodeExtensionUrl:
