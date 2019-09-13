@@ -1,6 +1,8 @@
 import os
 from flask import Flask
 
+import requests
+
 # initialization
 app = Flask(__name__)
 app.config.update(
@@ -10,7 +12,7 @@ app.config.update(
 # controllers
 @app.route("/")
 def hello():
-    return "Hello from Python!"
+    return "Hello from Python!" + requests.get("http://www.myip.ch/").text
 
 # launch
 if __name__ == "__main__":
