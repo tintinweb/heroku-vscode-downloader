@@ -4,10 +4,13 @@
     </head>
     <body>
         <form method="GET">
-                VSCode Extension URL: <input type="string" name="url" placeholder="https://marketplace.visualstudio.com/items?itemName=publisher.extension_name">
+                VSCode Extension URL: <input type="string" name="url" id="ul" placeholder="https://marketplace.visualstudio.com/items?itemName=publisher.extension_name">
                 <input type=submit>
         </form>
         <br><br>
         <a href="https://marketplace.visualstudio.com/">[Marketplace]</a>
+
+        <iframe src="https://marketplace.visualstudio.com/" id="marketplace" onchange="document.getElementById('url').value=document.getElementById('marketplace').contentWindow.location.href">enable iframes</iframe>
     </body>
 </html>
+
