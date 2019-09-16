@@ -1,6 +1,6 @@
 # VSCode Extension Downloader - Heroku App
 
-A simple PoC for an heroku web-app to download vscode extensions for offline use. → https://vscode-downloader.herokuapp.com/
+A simple PoC for a heroku web-app to download vscode extensions for offline use. → https://vscode-downloader.herokuapp.com/
 
 ![screenshot](https://user-images.githubusercontent.com/2865694/64946465-3bf10280-d873-11e9-84e7-9d681c6676f0.png)
 
